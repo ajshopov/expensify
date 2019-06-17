@@ -1,8 +1,8 @@
 {
-  "name": "indecision-app",
+  "name": "expensify",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/ajshopov/indecision_app.git",
+  "repository": "https://github.com/ajshopov/expensify.git",
   "author": "ajs",
   "license": "MIT",
   "scripts": {
