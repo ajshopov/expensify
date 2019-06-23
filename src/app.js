@@ -1,5 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import 'react-dates/initialize';
+import { Provider } from "react-redux";
 import "normalize.css/normalize.css";
 import "./styles/styles.scss";
 import AppRouter from "./routers/AppRouter";
@@ -19,20 +21,35 @@ store.subscribe(() => {
 store.dispatch(addExpense({
     description: 'water bill',
     note: 'pay my bills',
-    amount: 1500,
-    createdAt: 1000
+    amount: 4500,
+    createdAt: 800
   }
 ));
 store.dispatch(addExpense({
     description: 'gas bill',
     note: 'pay my billz',
     amount: 1200,
-    createdAt: 1200
+    createdAt: 1000
   }
 ));
-store.dispatch(setTextFilter('bill'));
-store.dispatch(setTextFilter('water'));
+store.dispatch(addExpense({
+  description: 'rent',
+  note: 'pay my billz',
+  amount: 104000,
+  createdAt: 900
+}
+));
+// store.dispatch(setTextFilter('bill'));
+// store.dispatch(setTextFilter('water'));
 
-// console.log(store.getState());
+// setTimeout(() => {
+//   store.dispatch(setTextFilter('bill'));
+// }, 3000);
 
-ReactDOM.render(<AppRouter />, document.getElementById('app'));
+const jsx = (
+  <Provider store={store}>
+    <AppRouter />
+  </Provider>
+);
+
+ReactDOM.render(jsx, document.getElementById('app'));
