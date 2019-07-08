@@ -21,7 +21,6 @@
     "babel-loader": "^8.0.0",
     "css-loader": "^3.0.0",
     "express": "^4.17.1",
-    "live-server": "^1.2.1",
     "moment": "^2.24.0",
     "normalize.css": "^8.0.1",
     "raf": "^3.4.1",
@@ -36,8 +35,7 @@
     "style-loader": "^0.23.1",
     "uuid": "^3.3.2",
     "validator": "^11.0.0",
-    "webpack": "^4.34.0",
-    "webpack-dev-server": "^3.7.1"
+    "webpack": "^4.34.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
@@ -51,9 +49,11 @@
     "enzyme-adapter-react-16": "^1.14.0",
     "enzyme-to-json": "^3.3.5",
     "jest": "^24.8.0",
+    "live-server": "^1.2.1",
     "mini-css-extract-plugin": "^0.7.0",
     "node-sass": "^4.12.0",
     "sass-loader": "^7.1.0",
-    "webpack-cli": "^3.3.4"
+    "webpack-cli": "^3.3.4",
+    "webpack-dev-server": "^3.7.2"
   }
 }
