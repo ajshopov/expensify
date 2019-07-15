@@ -29,31 +29,38 @@ export class ExpenseListFilters extends React.Component {
   }
   render(){
     return (
-      <div>
-        <input
+      <div className="content-container">
+        <div className="input-group">
+          <input
+          className="input-group__item text-input"
+          placeholder="Search expenses"
           type="text"
-          value={this.props.filters.text}
-          onChange={this.onTextChange}
-        />
-        <select
+            value={this.props.filters.text}
+            onChange={this.onTextChange}
+          />
+          <select
+          className="input-group__item select"  
           value={this.props.filters.sortBy}
-          onChange={this.onSortChange}
-        >
-          <option value="date">Date</option>
-          <option value="amount">Amount</option>
-        </select>
-        <DateRangePicker
-          startDate={this.props.filters.startDate}
-          startDateId="start"
-          endDate={this.props.filters.endDate}
-          endDateId="end"
-          onDatesChange={this.onDatesChange}
-          focusedInput={this.state.calendarFocused}
-          onFocusChange={this.onFocusChange}
-          numberOfMonths={1}
-          isOutsideRange={() => false}
-          showClearDates={true}
-        />
+            onChange={this.onSortChange}
+          >
+            <option value="date">Date</option>
+            <option value="amount">Amount</option>
+          </select>
+          <div className="input-group__item">
+            <DateRangePicker
+              startDate={this.props.filters.startDate}
+              startDateId="start"
+              endDate={this.props.filters.endDate}
+              endDateId="end"
+              onDatesChange={this.onDatesChange}
+              focusedInput={this.state.calendarFocused}
+              onFocusChange={this.onFocusChange}
+              numberOfMonths={1}
+              isOutsideRange={() => false}
+              showClearDates={true}
+            />
+          </div>
+        </div>
       </div>
     );
   }

@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import selectExpenses from "../selectors/expenses";
 import selectExpensesTotal from "../selectors/expenses-total";
 import numeral from "numeral";
@@ -8,8 +9,13 @@ export const ExpensesSummary = ({ expenseCount, expensesTotal }) => {
   const pluralise = expenseCount === 1 ? 'expense' : 'expenses';
   const formattedAmount = numeral(expensesTotal / 100).format('$0,0.00');
   return (
-    <div>
-      <p>Viewing {expenseCount} {pluralise} totalling {formattedAmount}</p>
+    <div className="summary">
+      <div className="content-container">
+        <h2 className="summary__title">
+          Viewing <span>{expenseCount}</span> {pluralise} totalling <span>{formattedAmount}</span>
+        </h2>
+        <Link className="button" to="/create">Add Expense</Link>
+      </div>
     </div>
   )
 }

@@ -1,0 +1,13 @@
+.summary{
+    background: $off-white;
+    padding: $m-size 0;
+    margin-bottom: $m-size;
+}
+
+.summary__title{
+    margin: 0;
+    font-weight: 300;
+    span{
+        font-weight: 700;
+    }
+}
