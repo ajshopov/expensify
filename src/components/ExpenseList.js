@@ -27,7 +27,7 @@ export const ExpenseList = (props) => (
 
 // mapping state to props
 const mapStateToProps = (state) => {
-  console.log(state);
+  // console.log(state);
   return {
     expenses: selectExpenses(state.expenses, state.filters)
   };
