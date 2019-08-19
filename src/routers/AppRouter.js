@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 
 import AddExpensePage from "../components/AddExpensePage";
 import ExpenseDashboardPage from "../components/ExpenseDashboardPage";
@@ -9,7 +9,7 @@ import HelpPage from "../components/HelpPage";
 import NotFoundPage from "../components/NotFoundPage";
 
 const AppRouter = () => (
-  <BrowserRouter>
+  <HashRouter>
     <Header />
     <Switch>
       <Route exact path="/" component={ExpenseDashboardPage} />
@@ -18,7 +18,7 @@ const AppRouter = () => (
       <Route path="/help" component={HelpPage} />
       <Route component={NotFoundPage} />
     </Switch>
-  </BrowserRouter>
+  </HashRouter>
 );
 
 export default AppRouter;
